@@ -12,5 +12,6 @@ export default defineConfig({
     alias: {
       "@": "/src",
     },
-  }
+  },
+  base: '/portfolio-start-project-vite/'
 });
