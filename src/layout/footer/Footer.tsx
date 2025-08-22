@@ -41,7 +41,6 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-background-color: #fff;
 padding: 10px 0;
 `
 
@@ -77,7 +76,6 @@ display: flex;
 gap: 20px;
 `
 const SocialLink = styled.a`
-
 font-family: "DM Sans", sans-serif;
 font-weight: 500;
 font-size: 0.8rem;

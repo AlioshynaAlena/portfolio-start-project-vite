@@ -28,7 +28,6 @@ export const Works = () => {
 
 
 const StyledSectionWorks = styled.section`
-    background-color: #f2eef8;
 `
 const StyledText = styled.p`
 font-weight: 400;

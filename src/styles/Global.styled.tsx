@@ -30,6 +30,9 @@ a {
 ul {
     list-style: none;
 }
+section:nth-child(even) {
+  background-color: ${theme.colors.sectionColor};
+}
 
 button {
     background-color: unset;
@@ -41,4 +44,8 @@ button {
 section {
   padding: 100px 0;
 }
+
+
+
 `
+

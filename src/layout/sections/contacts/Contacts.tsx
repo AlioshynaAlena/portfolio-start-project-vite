@@ -29,7 +29,6 @@ export const Contacts = () => {
 }
 
 const StyledContacts = styled.section`
-background-color: #f2eef8;
 `
 const StyledForm = styled.form`
 max-width: 540px;

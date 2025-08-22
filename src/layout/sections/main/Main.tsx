@@ -31,7 +31,6 @@ const StyledPhoto = styled.img`
 `;
 const StyledMain = styled.section`
   min-height: 100vh;
-  background-color: #f2eef8;
   display: flex;
 `;
 

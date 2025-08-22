@@ -12,11 +12,16 @@ export const About = () => {
             <Container>
                 <SectionTitle>About</SectionTitle>
             <FlexWrapper>
+                <FotoWrapper>
+                    <img src={Frame} alt="pic" />
+                </FotoWrapper>
 
                 <AboutContainer>
                         <AboutContain>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.
 
                         </AboutContain>
+
+                        
                     
 
                     <AboutEducation>Education</AboutEducation>
@@ -74,9 +79,9 @@ export const About = () => {
                 </AboutContainer>
 
 
-                <FotoWrapper>
+                {/* <FotoWrapper>
                     <img src={Frame} alt="pic" />
-                </FotoWrapper>
+                </FotoWrapper> */}
             </FlexWrapper>
             </Container>
         
@@ -95,8 +100,7 @@ background-color: #fff;
 
 const AboutContainer = styled.div`
 display: flex;
-flex-direction: column;
-margin-right: 10px;  
+flex-direction: column;  
 `
 
 const AboutStudy = styled.div`
@@ -178,6 +182,8 @@ font-size: 0.75rem;
 const FotoWrapper = styled.div`
     position: relative;
   z-index: 0;
+  margin-right: 50px;
+  margin-top: 40px;
 
   &::before {
     content: "";
@@ -190,6 +196,5 @@ const FotoWrapper = styled.div`
     left: 24px;
     z-index: -1;
   }
-
 
 `

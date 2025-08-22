@@ -80,7 +80,7 @@ position: relative;
 &::before {
     content: '';
     display: inline-block;
-    height: 3px;
+    height: 2px;
     background-color: ${theme.colors.secondaryColorText};
 
 
