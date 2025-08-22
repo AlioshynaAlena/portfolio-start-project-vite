@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
+import { theme } from "../../../../styles/Theme";
 
 
 type WorkPropsType ={
@@ -58,26 +59,55 @@ const Image = styled.img`
 
 
 const WorkTitle = styled.h3`
-    text-align: center;
-    color: #42446E;
+font-weight: 500;
+font-size: 1.75rem;
+line-height: 26px;
+text-align: center;
+margin: 27px 30px 0;
+
+
 `
 
 const WorkDescription = styled.p`
-    text-align: center;
-    color: #666666;
+font-weight: 300;
+font-size: 1.125rem;
+line-height: 26px;
+max-width: 314px;
+margin: 17px 30px 12px;
+
+
 `
 
 const WorkText = styled.p`
-    text-align: center;
+    margin: 0 30px 21px;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 0px;
+color: ${theme.colors.secondaryColorText}
+
+
+
+
 `
+
+
+
+
 const Link = styled.a`
 display: flex;
 column-gap: 10px;
 justify-content: center;
+padding-bottom: 20px;
+
+font-weight: 400;
+line-height: 26px;
+text-decoration: underline;
+text-decoration-style: solid;
+color: #000000;
 `
 const WorkLinks = styled.div`
     display: flex;
-    column-gap: 40px;
+    column-gap: 48px;
     justify-content: center;
 `
 

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { ImageIcon } from "../../../../components/imageIcon/ImageIcon";
-
-
-
+import { theme } from "../../../../styles/Theme";
 
 type SkillPropsType ={
     title: string;
@@ -11,7 +9,6 @@ type SkillPropsType ={
     src: string;
     alt: string 
 }
-
 
 export const Skill = (props: SkillPropsType) => {
     return (
@@ -27,19 +24,30 @@ export const Skill = (props: SkillPropsType) => {
     )
 }
 
+
+
+
+
+
+
 const StyledSkill = styled.div`
 width: 15%;
-background-color: #fcf8f8;
-margin: 10px;
+/* margin-bottom: 20px; */
 display: flex;
 flex-direction: column;
 align-items: center; /* Центрирует по горизонтали */
-box-shadow: 2px 2px 100px 0px #00000033;
+/* box-shadow: 2px 2px 100px 0px #0000003d; */
 `
 
 const SkillTitle = styled.h3`
-  text-align: center;
-  margin-top: 10px;
+
+  margin-top: 20px;
+font-weight: 400;
+line-height: 26px;
+text-align: center;
+color: ${theme.colors.primaryColorText};
+
+
 `
 
 

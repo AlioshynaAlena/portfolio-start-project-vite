@@ -5,34 +5,42 @@ import { Work } from "./work/Work"
 import project1 from '../../../assets/images/project1.svg'
 import project2 from '../../../assets/images/project2.svg'
 import project3 from '../../../assets/images/project3.svg'
+import { Container } from "../../../components/Container"
+import { theme } from "../../../styles/Theme"
 
 
 
 export const Works = () => {
     return (
         <StyledSectionWorks>
-            <SectionTitle>Projects</SectionTitle>
+            <Container>
+                <SectionTitle>Projects</SectionTitle>
             <StyledText>Things I’ve built so far</StyledText>
             <FlexWrapper wrap={'wrap'} justify="space-around">
-                <Work src={project1} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack : HTML , JavaScript, SASS, React'}/>
-                <Work src={project2} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack : HTML , JavaScript, SASS, React'}/>
-                <Work src={project3} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack : HTML , JavaScript, SASS, React'}/>
-
-
+                <Work src={project1} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack: HTML , JavaScript, SASS, React'}/>
+                <Work src={project2} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack: HTML , JavaScript, SASS, React'}/>
+                <Work src={project3} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack: HTML , JavaScript, SASS, React'}/>
             </FlexWrapper>
-
-
-            
+            </Container>
         </StyledSectionWorks>
     )
 }
 
 
 const StyledSectionWorks = styled.section`
-    min-height: 100vh;
-    background-color: #e6ec30;
+    background-color: #f2eef8;
 `
 const StyledText = styled.p`
-    color: #254a6b;
-    text-align: center;
+font-weight: 400;
+font-size: 2rem;
+line-height: 26px;
+text-align: center;
+color: ${theme.colors.primaryColorText};
+margin: 50px 0;
+
+
+
+
+
+
 `

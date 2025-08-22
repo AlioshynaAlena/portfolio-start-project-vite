@@ -1,32 +1,95 @@
-import styled from 'styled-components'
-import photo from '../../../assets/images/frame.svg'
-import { FlexWrapper } from '../../../components/FlexWrapper'
-
+import styled from "styled-components";
+import photo from "../../../assets/images/frame.svg";
+import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Main = () => {
-    return (
-        <StyledMain>
-            <FlexWrapper align={'center'} justify={'space-around'}>
-            <div>
-                <span>Hi!</span>
-                <h2>I am Alena Alioshyna</h2>
-                <h1>Frontend Developer</h1>
-            </div>
+  return (
+    <StyledMain>
+      <Container>
+        <FlexWrapper align={"center"} justify={"space-between"}>
+          <Preview>
+            <SmallText>Hi!</SmallText>
+            <Name>
+              I am <span>Alena Alioshyna</span>
+            </Name>
+            <MainTitle>Frontend Developer.</MainTitle>
+          </Preview>
 
+          <FotoWrapper>
             <StyledPhoto src={photo} alt="" />
-            </FlexWrapper>
-        </StyledMain>
-    )
-}
+          </FotoWrapper>
+        </FlexWrapper>
+      </Container>
+    </StyledMain>
+  );
+};
 
 const StyledPhoto = styled.img`
-    /* width: 350px;
-    height: 430px; */
-    object-fit: cover;
-`
-const StyledMain = styled.div`
-min-height: 100vh;
-background-color: #b5dd65;
+  object-fit: cover;
+`;
+const StyledMain = styled.section`
+  min-height: 100vh;
+  background-color: #f2eef8;
+  display: flex;
+`;
 
+const SmallText = styled.span`
+  font-weight: 700;
+  font-size: 3.625rem;
+  color: ${theme.colors.secondaryColorText};
+  letter-spacing: -1px;
+`;
 
-`
+const MainTitle = styled.h1`
+  font-weight: 700;
+  font-size: 3.625rem;
+  color: ${theme.colors.secondaryColorText};
+  letter-spacing: -1px;
+`;
+
+const Name = styled.h2`
+  font-weight: 700;
+  font-size: 3.625rem;
+  color: ${theme.colors.secondaryColorText};
+  letter-spacing: -1px;
+  margin: 10px 0;
+
+  span {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 20px;
+      background-color: #fff;
+
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+`;
+const Preview = styled.div`
+  text-align: left;
+`;
+
+const FotoWrapper = styled.div`
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    width: 360px;
+    height: 470px;
+    border: 5px solid ${theme.colors.secondaryColorText};
+
+    position: absolute;
+    top: -24px;
+    left: 24px;
+    z-index: -1;
+  }
+`;

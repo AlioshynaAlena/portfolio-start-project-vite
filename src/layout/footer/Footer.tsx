@@ -2,11 +2,14 @@ import { styled } from "styled-components"
 import { Icon } from "../../components/icon/Icon"
 import { FlexWrapper } from "../../components/FlexWrapper"
 import { Logo } from "../../components/logo/Logo"
+import { Container } from "../../components/Container"
+import { theme } from "../../styles/Theme"
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FlexWrapper direction={'column'} justify={'center'}>
+            <Container>
+                <FlexWrapper direction={'column'} justify={'center'}>
                 <SocialItem>
                     
                     <SocialLogo>
@@ -15,8 +18,8 @@ export const Footer = () => {
 
                     <SocialInformation>
                         <SocialList>
-        <li><a href="">+37544</a></li>
-        <li><a href="">@yandex.ru</a></li>
+        <li><SocialLink href="">+37544xxxxxxx</SocialLink></li>
+        <li><SocialLink href="">aaaaaaaaaaaaaa@yandex.ru</SocialLink></li>
                         </SocialList>
 
                         <SocialIconLink>
@@ -28,6 +31,8 @@ export const Footer = () => {
                 </SocialItem>
             </FlexWrapper>
             <Copyright>© Developed by Alena Alioshyna</Copyright>
+            </Container>
+            
         </StyledFooter>
 
 
@@ -36,17 +41,14 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-background-color: #b0b0e8;
-/* min-height: 10vh; */
-padding: 0 5px 0;
+background-color: #fff;
+padding: 10px 0;
 `
 
 const SocialList = styled.ul`
 display: flex;
 column-gap: 30px;
-align-self: center;
-
-        
+align-self: center;     
 `
 const SocialItem = styled.div`
 display: flex;
@@ -62,6 +64,8 @@ align-self: center;
 const Copyright = styled.small`
 display: block;
 text-align: center;
+font-size: 0.6rem;
+color: ${theme.colors.primaryColorText};
     
 `
 const SocialLogo = styled.div`
@@ -71,4 +75,13 @@ const SocialLogo = styled.div`
 const SocialInformation = styled.div`
 display: flex;
 gap: 20px;
+`
+const SocialLink = styled.a`
+
+font-family: "DM Sans", sans-serif;
+font-weight: 500;
+font-size: 0.8rem;
+line-height: 26px;
+text-align: center; 
+color: ${theme.colors.primaryColorText};
 `

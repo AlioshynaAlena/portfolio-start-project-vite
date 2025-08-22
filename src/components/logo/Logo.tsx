@@ -1,4 +1,6 @@
+
 import { Icon } from "../icon/Icon"
+
 
 export const Logo = () => {
 return (
@@ -7,3 +9,5 @@ return (
     </a>
 )
 }
+
+

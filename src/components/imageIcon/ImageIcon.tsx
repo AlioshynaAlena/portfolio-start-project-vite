@@ -1,3 +1,4 @@
+import { styled } from "styled-components";
 
 type ImagePropsType = {
     src: string;
@@ -10,7 +11,7 @@ type ImagePropsType = {
 
 export const ImageIcon = (props: ImagePropsType) => {
     return (
-        <img 
+        <StyledImageIcon 
             src={props.src} 
             alt={props.alt || ""}  
             width={props.width}    
@@ -21,3 +22,7 @@ export const ImageIcon = (props: ImagePropsType) => {
     )
 }
 
+const StyledImageIcon = styled.img`
+   margin-top: 5px ;
+
+`

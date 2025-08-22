@@ -12,6 +12,8 @@ import GitIcon from "../../../assets/images/git.svg"
 import GitHubIcon from "../../../assets/images/github.svg"
 import SaasIcon from "../../../assets/images/sass.svg"
 import VscodeIcon from "../../../assets/images/vscode.svg"
+import { Container } from "../../../components/Container"
+import { theme } from "../../../styles/Theme"
 
 
 
@@ -19,7 +21,8 @@ import VscodeIcon from "../../../assets/images/vscode.svg"
 export const Skills = () => {
     return (
         <StyledSectionSkills>
-            <SectionTitle>Skills</SectionTitle>
+            <Container>
+                <SectionTitle>Technologies</SectionTitle>
             <StyledText>Technologies I’ve been working with recently</StyledText>
             <FlexWrapper wrap={'wrap'} justify="space-between">
                 <Skill src={HtmlIcon} alt={'html'} width={"120"} height={"120"}  title={'HTML 5'} />
@@ -31,9 +34,13 @@ export const Skills = () => {
                 <Skill src={GitIcon} alt={'git'} width={"120"} height={"120"} title={'GIT'} />
                 <Skill src={GitHubIcon} alt={'github'} width={"120"} height={"120"} title={'GITHUB'} />
                 <Skill src={SaasIcon} alt={'saas'} width={"120"} height={"120"} title={'SAAS'} />
-                <Skill src={VscodeIcon} alt={'vscode'} width={"120"} height={"120"} title={'VSCODE'} />
+                <Skill src={VscodeIcon} alt={'vscode'} width={"120"} height={"120"} title={'VSCode'} />
+                <Skill src={GitHubIcon} alt={'github'} width={"120"} height={"120"} title={'#'} />
+                <Skill src={SaasIcon} alt={'saas'} width={"120"} height={"120"} title={'#'} />
 
             </FlexWrapper>
+            </Container>
+            
         </StyledSectionSkills>
  
         
@@ -41,10 +48,14 @@ export const Skills = () => {
 }
 
 const StyledSectionSkills = styled.section`
-    background-color: #ddf685;
-    min-height: 100vh;
+    background-color: #fff;
 `
 const StyledText = styled.p`
-    color: #254a6b;
+    color: ${theme.colors.primaryColorText};
     text-align: center;
+    margin: 50px 0;
+font-weight: 400;
+font-size: 2rem;
+line-height: 26px;
+
 `
