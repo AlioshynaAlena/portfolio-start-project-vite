@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
 *,
@@ -33,6 +34,8 @@ ul {
 button {
     background-color: unset;
     border: none;
+    cursor: pointer;
+    color: ${theme.colors.secondaryColorText};
 }
 
 section {

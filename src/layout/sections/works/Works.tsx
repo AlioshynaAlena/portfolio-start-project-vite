@@ -16,7 +16,7 @@ export const Works = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
             <StyledText>Things I’ve built so far</StyledText>
-            <FlexWrapper wrap={'wrap'} justify="space-around">
+            <FlexWrapper wrap={'wrap'} justify="space-around" align={"flex-start"}>
                 <Work src={project1} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack: HTML , JavaScript, SASS, React'}/>
                 <Work src={project2} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack: HTML , JavaScript, SASS, React'}/>
                 <Work src={project3} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack: HTML , JavaScript, SASS, React'}/>

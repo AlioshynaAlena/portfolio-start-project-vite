@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
 import { theme } from "../../../../styles/Theme";
+import { Button } from "../../../../components/Button";
 
 
 type WorkPropsType ={
@@ -15,7 +16,11 @@ type WorkPropsType ={
 export const Work = (props: WorkPropsType) => {
 return (
 <StyledWork>
-            <Image src={props.src} alt=""/>
+    <ImageWrapper>
+        <Image src={props.src} alt=""/>
+        <Button>VIEW PROJECT</Button>
+    </ImageWrapper>
+
             <WorkTitle>{props.title}</WorkTitle>
             <WorkDescription>{props.description}</WorkDescription>
             <WorkText>{props.text}</WorkText>
@@ -83,15 +88,8 @@ const WorkText = styled.p`
 font-weight: 400;
 line-height: 26px;
 letter-spacing: 0px;
-color: ${theme.colors.secondaryColorText}
-
-
-
-
+color: ${theme.colors.secondaryColorText};
 `
-
-
-
 
 const Link = styled.a`
 display: flex;
@@ -115,5 +113,43 @@ const LinkDescription = styled.div`
 line-height: 162.5%;
 `
 
+const ImageWrapper = styled.div`
+    position: relative;
 
+    &:hover {
+&::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.3);
+        backdrop-filter: blur(4px);
+        border-radius: 20px 20px 0 0; 
+
+    }
+    ${Button} {
+            opacity: 1;
+        }
+    }
+    
+
+    ${Button} {
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        &::before {
+            width: 100%;
+            height: 100%;
+
+
+        }
+
+    }
+
+`
 
