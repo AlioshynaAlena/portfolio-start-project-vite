@@ -4,6 +4,7 @@ import { FlexWrapper } from "../../components/FlexWrapper"
 import { Logo } from "../../components/logo/Logo"
 import { Container } from "../../components/Container"
 import { theme } from "../../styles/Theme"
+import { font } from "../../styles/Common"
 
 export const Footer = () => {
     return (
@@ -53,6 +54,13 @@ const SocialItem = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
+@media ${theme.media.mobile} {
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
     
 `
 const SocialIconLink = styled.div`
@@ -65,6 +73,10 @@ display: block;
 text-align: center;
 font-size: 0.6rem;
 color: ${theme.colors.primaryColorText};
+
+@media ${theme.media.mobile} {
+    margin-top: 20px;
+}
     
 `
 const SocialLogo = styled.div`
@@ -74,11 +86,14 @@ const SocialLogo = styled.div`
 const SocialInformation = styled.div`
 display: flex;
 gap: 20px;
+@media ${theme.media.mobile} {
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
 `
 const SocialLink = styled.a`
-font-family: "DM Sans", sans-serif;
-font-weight: 500;
-font-size: 0.8rem;
+${font({ weight: 500, Fmax: 0.8, Fmin: 0.8, family: "DM Sans" })}
 line-height: 26px;
 text-align: center; 
 color: ${theme.colors.primaryColorText};

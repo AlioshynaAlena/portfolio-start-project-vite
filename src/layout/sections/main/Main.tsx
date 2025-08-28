@@ -3,12 +3,13 @@ import photo from "../../../assets/images/frame.svg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
+        <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}>
           <Preview>
             <SmallText>Hi!</SmallText>
             <Name>
@@ -30,10 +31,16 @@ const StyledPhoto = styled.img`
   object-fit: cover;
   width: 350px;
   height: 430px;
+  margin-right: 20px;
+
+    @media ${theme.media.tablet} {
+      margin-top: 65px;
+    }
 
   @media ${theme.media.mobile} {
       width: 314px;
       height: 414px;
+      margin-top: 65px;
     }
 `;
 const StyledMain = styled.section`
@@ -42,22 +49,26 @@ const StyledMain = styled.section`
 `;
 
 const SmallText = styled.span`
-  font-weight: 700;
-  font-size: 3.625rem;
+${font({ weight: 700, Fmax: 3.625, Fmin: 2.25  })}
+
+  /* font-weight: 700;
+  font-size: 3.625rem; */
   color: ${theme.colors.secondaryColorText};
   letter-spacing: -1px;
 `;
 
 const MainTitle = styled.h1`
-  font-weight: 700;
-  font-size: 3.625rem;
+${font({ weight: 700, Fmax: 3.625, Fmin: 2.25  })}
+  /* font-weight: 700;
+  font-size: 3.625rem; */
   color: ${theme.colors.secondaryColorText};
   letter-spacing: -1px;
 `;
 
 const Name = styled.h2`
-  font-weight: 700;
-  font-size: 3.625rem;
+${font({ weight: 700, Fmax: 3.625, Fmin: 2.25  })}
+  /* font-weight: 700;
+  font-size: 3.625rem; */
   color: ${theme.colors.secondaryColorText};
   letter-spacing: -1px;
   margin: 10px 0;
@@ -65,6 +76,7 @@ const Name = styled.h2`
   span {
     position: relative;
     z-index: 0;
+    white-space: nowrap;
 
     &::before {
       content: "";
@@ -77,6 +89,10 @@ const Name = styled.h2`
       bottom: 0;
       z-index: -1;
     }
+  }
+
+  @media ${theme.media.mobile}{
+    margin: 15px 0 22px;
   }
 `;
 const Preview = styled.div`
@@ -98,9 +114,16 @@ const FotoWrapper = styled.div`
     left: 24px;
     z-index: -1;
 
+
+
+
     @media ${theme.media.mobile} {
       width: 314px;
       height: 414px;
+      margin-top: 65px;
+      top: -17px;
+      left: 20px;
+      
     }
   }
 `;

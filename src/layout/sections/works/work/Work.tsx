@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
 import { theme } from "../../../../styles/Theme";
 import { Button } from "../../../../components/Button";
+import { font } from "../../../../styles/Common";
 
 
 type WorkPropsType ={
@@ -64,8 +65,7 @@ const Image = styled.img`
 
 
 const WorkTitle = styled.h3`
-font-weight: 500;
-font-size: 1.75rem;
+${font({ weight: 500, Fmax: 1.75, Fmin: 1.5  })}
 line-height: 26px;
 text-align: center;
 margin: 27px 30px 0;
@@ -74,8 +74,7 @@ margin: 27px 30px 0;
 `
 
 const WorkDescription = styled.p`
-font-weight: 300;
-font-size: 1.125rem;
+${font({ weight: 300, Fmax: 1.125, Fmin: 1  })}
 line-height: 26px;
 max-width: 314px;
 margin: 17px 30px 12px;
@@ -84,8 +83,8 @@ margin: 17px 30px 12px;
 `
 
 const WorkText = styled.p`
-    margin: 0 30px 21px;
-font-weight: 400;
+${font({ weight: 400, Fmax: 2, Fmin: 0.7  })}
+margin: 0 30px 21px;
 line-height: 26px;
 letter-spacing: 0px;
 color: ${theme.colors.secondaryColorText};
@@ -110,6 +109,7 @@ const WorkLinks = styled.div`
 `
 
 const LinkDescription = styled.div`
+${font({ Fmax: 1, Fmin: 0.8})}
 line-height: 162.5%;
 `
 

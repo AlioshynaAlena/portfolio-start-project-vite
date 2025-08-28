@@ -14,6 +14,7 @@ import SaasIcon from "../../../assets/images/sass.svg"
 import VscodeIcon from "../../../assets/images/vscode.svg"
 import { Container } from "../../../components/Container"
 import { theme } from "../../../styles/Theme"
+import { font } from "../../../styles/Common"
 
 
 
@@ -51,11 +52,12 @@ const StyledSectionSkills = styled.section`
     background-color: #fff;
 `
 const StyledText = styled.p`
+${font({ weight: 400, Fmax: 2, Fmin: 1.2  })}
     color: ${theme.colors.primaryColorText};
     text-align: center;
     margin: 50px 0;
-font-weight: 400;
-font-size: 2rem;
+/* font-weight: 400; */
+/* font-size: 2rem; */
 line-height: 26px;
 
 `

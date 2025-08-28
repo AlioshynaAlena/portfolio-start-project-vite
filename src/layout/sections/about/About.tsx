@@ -5,13 +5,14 @@ import { Icon } from "../../../components/icon/Icon"
 import Frame from '../../../assets/images/frame.svg'
 import { Container } from "../../../components/Container"
 import { theme } from "../../../styles/Theme"
+import { font } from "../../../styles/Common"
 
 export const About = () => {
     return (
         <StyledAbout>
             <Container>
                 <SectionTitle>About</SectionTitle>
-            <FlexWrapper wrap={"wrap"}>
+                    <FlexWrapper wrap={"wrap"} justify={"space-around"}>
                 <FotoWrapper>
                     <FotoAbout src={Frame} alt="pic" />
                 </FotoWrapper>
@@ -83,6 +84,9 @@ export const About = () => {
                     <img src={Frame} alt="pic" />
                 </FotoWrapper> */}
             </FlexWrapper>
+
+                
+            
             </Container>
         
 
@@ -135,46 +139,50 @@ height: 24px;
 `
 
 const AboutContain = styled.p`
-font-weight: 400;
-font-size: 1.125rem;
+${font({ weight: 400, Fmax: 1.125, Fmin: 1  })}
 line-height: 26px;
 letter-spacing: 0px;
 margin: 38px 0;
 color: ${theme.colors.primaryColorText};
+
+@media ${theme.media.mobile}{
+    text-align: center;
+}
  
 `
 const AboutEducation = styled.h3`
-font-weight: 700;
-font-size: 2.625rem;
+${font({ weight: 700, Fmax: 2.625, Fmin: 2  })}
 line-height: 52px;
 letter-spacing: -0.4px;
 color: ${theme.colors.secondaryColorText};
 margin-bottom: 38px;
+ @media ${theme.media.tablet} {
+    text-align: center;
+ }
+ @media ${theme.media.mobile} {
+    text-align: center;
+ }
   
 `
 
 
 const AboutDegree = styled.div`
-font-weight: 400;
-font-size: 1.25rem;
+${font({ weight: 400, Fmax: 1.25, Fmin: 0.8  })}
 line-height: 28px;
 letter-spacing: 1px;
 color: ${theme.colors.primaryColorText};
 `
 const AboutUniversityName = styled.div`
-font-weight: 500;
-font-size: 0.75rem;
+${font({ weight: 500, Fmax: 0.75, Fmin: 0.75  })}
 line-height: 28px;
 letter-spacing: 1px;
 color: #A7A7A7;
 `
 const AboutStudyTime = styled.div`
-font-weight: 500;
-font-size: 12px;
+${font({ weight: 500, Fmax: 0.75, Fmin: 0.75  })}
 line-height: 28px;
 letter-spacing: 1px;
 color: #A7A7A7;
-font-size: 0.75rem;
 
 `
 
@@ -215,3 +223,6 @@ const FotoAbout =styled.img`
 
 
 `
+
+
+
