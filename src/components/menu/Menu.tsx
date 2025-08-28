@@ -49,6 +49,9 @@ const StyledMenu = styled.nav`
         text-align: center;
         color: transparent;
     }
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 
 `
 

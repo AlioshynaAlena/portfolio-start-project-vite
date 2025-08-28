@@ -8,7 +8,7 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper align={"center"} justify={"space-between"}>
+        <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
           <Preview>
             <SmallText>Hi!</SmallText>
             <Name>
@@ -28,6 +28,13 @@ export const Main = () => {
 
 const StyledPhoto = styled.img`
   object-fit: cover;
+  width: 350px;
+  height: 430px;
+
+  @media ${theme.media.mobile} {
+      width: 314px;
+      height: 414px;
+    }
 `;
 const StyledMain = styled.section`
   min-height: 100vh;
@@ -90,5 +97,10 @@ const FotoWrapper = styled.div`
     top: -24px;
     left: 24px;
     z-index: -1;
+
+    @media ${theme.media.mobile} {
+      width: 314px;
+      height: 414px;
+    }
   }
 `;

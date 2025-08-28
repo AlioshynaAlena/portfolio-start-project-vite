@@ -1,5 +1,6 @@
 import { styled } from "styled-components"
 import { Icon } from "../icon/Icon"
+import { theme } from "../../styles/Theme"
 
 export const IconSocial =() => {
     return (
@@ -15,5 +16,9 @@ const StyledIconSocial = styled.a`
     display: flex;
     column-gap: 20px;
     align-self: center;
+
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 
 `

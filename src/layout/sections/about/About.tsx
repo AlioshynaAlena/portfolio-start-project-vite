@@ -11,9 +11,9 @@ export const About = () => {
         <StyledAbout>
             <Container>
                 <SectionTitle>About</SectionTitle>
-            <FlexWrapper>
+            <FlexWrapper wrap={"wrap"}>
                 <FotoWrapper>
-                    <img src={Frame} alt="pic" />
+                    <FotoAbout src={Frame} alt="pic" />
                 </FotoWrapper>
 
                 <AboutContainer>
@@ -195,6 +195,23 @@ const FotoWrapper = styled.div`
     top: -24px;
     left: 24px;
     z-index: -1;
+
+    @media ${theme.media.mobile} {
+          width: 314px;
+          height: 414px;
+        }
   }
+
+`
+const FotoAbout =styled.img`
+     object-fit: cover;
+  width: 350px;
+  height: 430px;
+
+  @media ${theme.media.mobile} {
+      width: 314px;
+      height: 414px;
+    }
+
 
 `
