@@ -4,7 +4,7 @@ import { theme } from "../../../../styles/Theme";
 import { font } from "../../../../styles/Common";
 
 type SkillPropsType = {
-  title: string;
+  title?: string;
   width: string;
   height: string;
   src: string;
@@ -34,6 +34,7 @@ const StyledSkill = styled.div`
   flex-direction: column;
   align-items: center; /* Центрирует по горизонтали */
   /* box-shadow: 2px 2px 100px 0px #0000003d; */
+  gap: 80px;
 
   img {
     width: 120px;

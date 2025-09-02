@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import photo from "../../../assets/images/frame.svg";
+import photo from "../../../assets/images/frame.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
@@ -114,7 +114,9 @@ const FotoWrapper = styled.div`
     left: 24px;
     z-index: -1;
 
-
+    @media ${theme.media.tablet} {
+      margin-top: 65px;
+    }
 
 
     @media ${theme.media.mobile} {

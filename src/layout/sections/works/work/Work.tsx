@@ -53,6 +53,7 @@ border-radius: 20px;
 display: flex;
 flex-direction: column;
 box-shadow: 2px 2px 100px 0px #00000033;
+margin-bottom: 62px;
 
 
 `
