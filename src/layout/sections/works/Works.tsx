@@ -36,6 +36,7 @@ export const Works = () => {
 
 
 const StyledSectionWorks = styled.section`
+position: relative;
 `
 const StyledText = styled.p`
 ${font({ weight: 400, Fmax: 2, Fmin: 1.2  })}

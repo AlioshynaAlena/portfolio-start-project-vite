@@ -43,6 +43,7 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
 padding: 10px 0;
+position: relative;
 `
 
 const SocialList = styled.ul`

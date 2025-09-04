@@ -116,6 +116,7 @@ export const About = () => {
 
 const StyledAbout = styled.section`
 background-color: #fff;
+position: relative;
 `
 
 const AboutContainer = styled.div`

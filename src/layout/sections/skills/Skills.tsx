@@ -52,6 +52,7 @@ export const Skills = () => {
 
 const StyledSectionSkills = styled.section`
     background-color: #fff;
+    position: relative;
 `
 const StyledText = styled.p`
 ${font({ weight: 400, Fmax: 2, Fmin: 1.2  })}
