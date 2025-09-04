@@ -2,6 +2,7 @@ import { styled } from "styled-components"
 import { theme } from "../../styles/Theme"
 import { css } from "styled-components"
 import { useState } from "react"
+import { Link } from "react-scroll"
 
 export const MobileMenu = () => {
 
@@ -19,31 +20,31 @@ const onBurgerBtnClick = () => {
 
             <MobileMenuPopup isOpen={menuIsOpen} onClick = {()=>{setMenuIsOpen(false)}}>
                 <ul>
-        <ListItem><a href="">Home
+        <ListItem><NavLink to="home">Home
             <Mask><span>Home</span></Mask>
             <Mask><span>Home</span></Mask>
             
-            </a>
+            </NavLink>
             </ListItem>
-        <ListItem><a href="">Technologies
+        <ListItem><NavLink to="technologies">Technologies
             <Mask><span>Technologies</span></Mask>
             <Mask><span>Technologies</span></Mask>
-            </a>
+            </NavLink>
             </ListItem>
-        <ListItem><a href="">Projects
+        <ListItem><NavLink to="projects">Projects
             <Mask><span>Projects</span></Mask>
             <Mask><span>Projects</span></Mask>
-            </a>
+            </NavLink>
             </ListItem>
-        <ListItem><a href="">About
+        <ListItem><NavLink to="about">About
             <Mask><span>About</span></Mask>
             <Mask><span>About</span></Mask>
-            </a>
+            </NavLink>
             </ListItem>
-        <ListItem><a href="">Contact
+        <ListItem><NavLink to="contact">Contact
             <Mask><span>Contact</span></Mask>
             <Mask><span>Contact</span></Mask>
-            </a>
+            </NavLink>
             </ListItem>
     </ul>
             </MobileMenuPopup>
@@ -139,17 +140,7 @@ ${props => props.isOpen && css<{isOpen: boolean}>`
         gap: 30px;
         flex-direction: column;
         align-items: center;
-    }
-    a {
-        font-family: 'DM Sans', sans-serif;
-        font-weight: 500;
-        font-size: 1.25rem;
-        /* color: ${theme.colors.primaryColorText}; */
-        text-align: center;
-        color: transparent;
-    }
-
-    
+    }    
 `
 
 const Mask = styled.span`
@@ -196,7 +187,6 @@ const ListItem = styled.li`
         }
         ${Mask} {
             transform: skewX(12deg) translateX(5px);
-            color: 
     
             & + ${Mask} {
           transform: skewX(12deg) translateX(-5px);  
@@ -204,5 +194,19 @@ const ListItem = styled.li`
         }
     
         
-    }`
+    }
+    
+    
+    `
+
+    const NavLink = styled(Link)`
+font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 1.25rem;
+        /* color: ${theme.colors.primaryColorText}; */
+        text-align: center;
+        color: transparent;
+    
+    `
+      
       

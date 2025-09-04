@@ -16,7 +16,7 @@ import { font } from "../../../styles/Common"
 
 export const Works = () => {
     return (
-        <StyledSectionWorks>
+        <StyledSectionWorks id={"projects"}>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
             <StyledText>Things I’ve built so far</StyledText>

@@ -9,7 +9,7 @@ import Pic from '../../../assets/images/pic.svg'
 
 export const About = () => {
     return (
-        <StyledAbout>
+        <StyledAbout id={"about"}>
             <Container>
                 <SectionTitle>About</SectionTitle>
 

@@ -9,7 +9,7 @@ import Tilt from "react-parallax-tilt";
 
 export const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain id={"home"}>
       <Container>
         <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}>
           <Preview>
@@ -80,7 +80,7 @@ const SmallText = styled.span`
 `;
 
 const MainTitle = styled.h1`
-  ${font({ weight: 700, Fmax: 3.625, Fmin: 2.25 })};
+  ${font({ weight: 700, Fmax: 3.625, Fmin: 2.1 })};
   color: ${theme.colors.secondaryColorText};
   letter-spacing: -1px;
 
