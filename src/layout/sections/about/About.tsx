@@ -6,12 +6,14 @@ import { Container } from "../../../components/Container"
 import { theme } from "../../../styles/Theme"
 import { font } from "../../../styles/Common"
 import Pic from '../../../assets/images/pic.svg'
+import { Fade } from "react-awesome-reveal"
 
 export const About = () => {
     return (
         <StyledAbout id={"about"}>
             <Container>
                 <SectionTitle>About</SectionTitle>
+                <Fade cascade={true}>
 
                     <FlexWrapper  justify={"space-around"} align={"center"} >
 
@@ -102,11 +104,14 @@ export const About = () => {
 
 
                 <FotoWrapper>
+
                     <FotoAbout src={Pic} alt="pic" />
                 </FotoWrapper>
 
 
             </FlexWrapper>
+            </Fade>
+            
             </Container>  
         </StyledAbout>
 

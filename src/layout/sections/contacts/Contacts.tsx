@@ -4,17 +4,45 @@ import { FlexWrapper } from "../../../components/FlexWrapper"
 import { Button } from "../../../components/Button"
 import { Container } from "../../../components/Container"
 import { theme } from "../../../styles/Theme"
+import emailjs from '@emailjs/browser';
+import { ElementRef, useRef } from "react"
 
 export const Contacts = () => {
+
+const form = useRef<ElementRef<'form'>>(null);
+
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    if (!form.current) return
+
+    emailjs
+      .sendForm('service_qsjs6kg', 'template_p6l7ci8', form.current, {
+        publicKey: '',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+      e.target.reset()
+  };
+
+
     return (
         <StyledContacts id={"contact"}>
             <Container>
                 <SectionTitle>Contact</SectionTitle>
             <FlexWrapper wrap={'wrap'} justify="space-around">
-                <StyledForm>
-                    <StyledField placeholder={'Name'}></StyledField>
-                    <StyledField placeholder={'Subject'}></StyledField>
-                    <StyledField as={'textarea'} placeholder={'Message'}></StyledField>
+                <StyledForm ref={form} onSubmit={sendEmail}>
+                    <StyledField required placeholder={'Name'} name={'user_name'}></StyledField>
+                    <StyledField required placeholder={'Email'} name={'email'}></StyledField>
+                    <StyledField required placeholder={'Subject'} name={'subject'}></StyledField>
+                    <StyledField required as={'textarea'} placeholder={'message'} name={'message'}></StyledField>
                     <Button type={'submit'}>Send Message</Button>
                 </StyledForm>
 {/* выносить нужно */}
