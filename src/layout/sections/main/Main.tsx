@@ -4,6 +4,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
+import Typewriter from "typewriter-effect";
 
 export const Main = () => {
   return (
@@ -15,7 +16,18 @@ export const Main = () => {
             <Name>
               I am <span>Alena Alioshyna</span>
             </Name>
-            <MainTitle>Frontend Developer.</MainTitle>
+            {/* <MainTitle>A Frontend Developer.</MainTitle> */}
+            <MainTitle>
+              <p>A Frontend Developer.</p>
+              <Typewriter
+                options={{
+                  strings: ["A Frontend Developer."],
+                  autoStart: true,
+                  loop: true,
+                  delay: 50,
+                }}
+              />
+            </MainTitle>
           </Preview>
 
           <FotoWrapper>
@@ -33,15 +45,15 @@ const StyledPhoto = styled.img`
   height: 430px;
   margin-right: 20px;
 
-    @media ${theme.media.tablet} {
-      margin-top: 65px;
-    }
+  @media ${theme.media.tablet} {
+    margin-top: 65px;
+  }
 
   @media ${theme.media.mobile} {
-      width: 314px;
-      height: 414px;
-      margin-top: 65px;
-    }
+    width: 314px;
+    height: 414px;
+    margin-top: 65px;
+  }
 `;
 const StyledMain = styled.section`
   min-height: 100vh;
@@ -49,7 +61,7 @@ const StyledMain = styled.section`
 `;
 
 const SmallText = styled.span`
-${font({ weight: 700, Fmax: 3.625, Fmin: 2.25  })}
+  ${font({ weight: 700, Fmax: 3.625, Fmin: 2.25 })}
 
   /* font-weight: 700;
   font-size: 3.625rem; */
@@ -58,15 +70,17 @@ ${font({ weight: 700, Fmax: 3.625, Fmin: 2.25  })}
 `;
 
 const MainTitle = styled.h1`
-${font({ weight: 700, Fmax: 3.625, Fmin: 2.25  })}
-  /* font-weight: 700;
-  font-size: 3.625rem; */
+  ${font({ weight: 700, Fmax: 3.625, Fmin: 2.25 })};
   color: ${theme.colors.secondaryColorText};
   letter-spacing: -1px;
+
+  p {
+    display: none;
+  }
 `;
 
 const Name = styled.h2`
-${font({ weight: 700, Fmax: 3.625, Fmin: 2.25  })}
+  ${font({ weight: 700, Fmax: 3.625, Fmin: 2.25 })}
   /* font-weight: 700;
   font-size: 3.625rem; */
   color: ${theme.colors.secondaryColorText};
@@ -91,7 +105,7 @@ ${font({ weight: 700, Fmax: 3.625, Fmin: 2.25  })}
     }
   }
 
-  @media ${theme.media.mobile}{
+  @media ${theme.media.mobile} {
     margin: 15px 0 22px;
   }
 `;
@@ -118,14 +132,12 @@ const FotoWrapper = styled.div`
       margin-top: 65px;
     }
 
-
     @media ${theme.media.mobile} {
       width: 314px;
       height: 414px;
       margin-top: 65px;
       top: -17px;
       left: 20px;
-      
     }
   }
 `;
