@@ -107,7 +107,7 @@ const Name = styled.h2`
       display: inline-block;
       width: 100%;
       height: 20px;
-      background-color: #fff;
+      background-color: #f2eef8;
 
       position: absolute;
       bottom: 0;

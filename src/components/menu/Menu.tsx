@@ -95,6 +95,7 @@ const Mask = styled.span`
    overflow-y: hidden;
    /* outline: 1px solid red; */
    color: ${theme.colors.primaryColorText};
+   transition: ${theme.animations.transition};
 
 
    & + & {
@@ -166,6 +167,7 @@ font-family: 'DM Sans', sans-serif;
 
 
     transform: scale(0);
+    transition: ${theme.animations.transition};
 }
 
     &:hover, &.active {

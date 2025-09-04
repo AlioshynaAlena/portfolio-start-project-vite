@@ -69,6 +69,8 @@ display: flex;
 column-gap: 20px; 
 align-self: center;
 `
+
+
 const Copyright = styled.small`
 display: block;
 text-align: center;
@@ -98,4 +100,6 @@ ${font({ weight: 500, Fmax: 0.8, Fmin: 0.8, family: "DM Sans" })}
 line-height: 26px;
 text-align: center; 
 color: ${theme.colors.primaryColorText};
+transition: ${theme.animations.transition};
+
 `

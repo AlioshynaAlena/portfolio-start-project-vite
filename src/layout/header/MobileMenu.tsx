@@ -118,6 +118,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         }
     }
 `
+
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
 position: fixed;
 top: 0;
@@ -126,21 +127,29 @@ bottom: 0;
 left: 0;
 z-index: 999999;
 background-color: #f2eef8;
-
-display: none;
+/* opacity: .9; */
+display: flex;
+justify-content: center;
+align-items: center;
+transform: translateY(-100%);
+transition: .6s ease-in-out;
 
 ${props => props.isOpen && css<{isOpen: boolean}>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transform: translateY(0);
+
 `},
 
     ul {
         display: flex;
-        gap: 30px;
+        gap: 20px;
         flex-direction: column;
         align-items: center;
-    }    
+
+    }   
+    
+    
+
+    
 `
 
 const Mask = styled.span`

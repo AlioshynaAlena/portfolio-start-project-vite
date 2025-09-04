@@ -117,8 +117,8 @@ line-height: 162.5%;
 const ImageWrapper = styled.div`
     position: relative;
 
-    &:hover {
-&::before {
+
+    &::before {
         content: '';
         position: absolute;
         left: 0;
@@ -126,31 +126,44 @@ const ImageWrapper = styled.div`
         top: 0;
         bottom: 0;
         background: rgba(0,0,0,0.3);
-        backdrop-filter: blur(4px);
-        border-radius: 20px 20px 0 0; 
-
+        backdrop-filter: blur(2px);
+        border-radius: 20px 20px 0 0;
+        transition: ${theme.animations.transition};
+        opacity: 0;
     }
-    ${Button} {
+
+    &:hover {
+        &::before {
             opacity: 1;
         }
+
+        ${Button} {
+            opacity: 1;
+             transform: translate(-50%, -50%);
+        }
     }
-    
+
+
+
+
+
+
 
     ${Button} {
         opacity: 0;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -40%);
+        transition: ${theme.animations.transition};
 
         &::before {
             width: 100%;
             height: 100%;
-
-
         }
-
     }
+
+    
 
 `
 
