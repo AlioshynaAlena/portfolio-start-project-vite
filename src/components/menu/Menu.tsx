@@ -18,6 +18,19 @@ export const Menu = () => {
             </NavLink>
 
             </ListItem>
+
+<ListItem>
+            <NavLink 
+            to='about'
+            smooth={true}
+            activeClass="active"
+            spy={true}
+            >About
+            <Mask><span>About</span></Mask>
+            <Mask><span>About</span></Mask>
+            </NavLink>
+            </ListItem>
+
         <ListItem>
             <NavLink 
             to='technologies'
@@ -42,17 +55,7 @@ export const Menu = () => {
             </NavLink>
             </ListItem>
 
-        <ListItem>
-            <NavLink 
-            to='about'
-            smooth={true}
-            activeClass="active"
-            spy={true}
-            >About
-            <Mask><span>About</span></Mask>
-            <Mask><span>About</span></Mask>
-            </NavLink>
-            </ListItem>
+        
             
         <ListItem>
             <NavLink 
