@@ -17,6 +17,7 @@ import ReduxIcon from "../../../assets/images/vector.svg"
 import { Container } from "../../../components/Container"
 import { theme } from "../../../styles/Theme"
 import { font } from "../../../styles/Common"
+import { Fade } from "react-awesome-reveal";
 
 
 
@@ -27,6 +28,7 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>Technologies</SectionTitle>
             <StyledText>Technologies I’ve been working with recently</StyledText>
+            <Fade cascade={true}>
             <FlexWrapper wrap={'wrap'} justify="space-between">
                 <Skill src={HtmlIcon} alt={'html'} width={"120"} height={"120"}   />
                 <Skill src={CssIcon} alt={'css'} width={"120"} height={"120"}/>
@@ -41,7 +43,9 @@ export const Skills = () => {
                 <Skill src={BootstrapIcon} alt={'github'} width={"120"} height={"120"} />
                 <Skill src={ReduxIcon} alt={'saas'} width={"120"} height={"120"} />
 
+
             </FlexWrapper>
+            </Fade>
             </Container>
             
         </StyledSectionSkills>

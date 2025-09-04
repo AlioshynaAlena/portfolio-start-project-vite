@@ -11,6 +11,7 @@ import project6 from '../../../assets/images/project6.svg'
 import { Container } from "../../../components/Container"
 import { theme } from "../../../styles/Theme"
 import { font } from "../../../styles/Common"
+import { Fade } from "react-awesome-reveal"
 
 
 
@@ -20,6 +21,7 @@ export const Works = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
             <StyledText>Things I’ve built so far</StyledText>
+            <Fade cascade={true}>
             <FlexWrapper wrap={'wrap'} justify="space-around" align={"flex-start"}>
                 <Work src={project1} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack: HTML , JavaScript, SASS, React'}/>
                 <Work src={project2} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack: HTML , JavaScript, SASS, React'}/>
@@ -29,6 +31,7 @@ export const Works = () => {
                 <Work src={project6} title={'Project Tile goes here'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} text={'Tech stack: HTML , JavaScript, SASS, React'}/>
                 
             </FlexWrapper>
+            </Fade>
             </Container>
         </StyledSectionWorks>
     )
