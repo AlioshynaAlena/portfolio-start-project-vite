@@ -23,10 +23,18 @@ export const Footer = () => {
         <li><SocialLink href="">aaaaaaaaaaaaaa@yandex.ru</SocialLink></li>
                         </SocialList>
 
-                        <SocialIconLink>
+                        {/* <SocialIconLink>
                 <Icon iconId={'gitHubIcon'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
                 <Icon iconId={'in'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
-                        </SocialIconLink>
+                        </SocialIconLink> */}
+
+                <SocialIconLink>
+                <li><SocialLink href=""><Icon iconId={'gitHubIcon'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/></SocialLink></li>
+                <li><SocialLink href=""><Icon iconId={'in'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/></SocialLink></li>
+                </SocialIconLink>
+
+
+
                         
                     </SocialInformation>                  
                 </SocialItem>
@@ -42,8 +50,8 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-padding: 10px 0;
 position: relative;
+padding: 10px 0;
 `
 
 const SocialList = styled.ul`
@@ -64,7 +72,7 @@ align-items: center;
 
     
 `
-const SocialIconLink = styled.div`
+const SocialIconLink = styled.ul`
 display: flex; 
 column-gap: 20px; 
 align-self: center;

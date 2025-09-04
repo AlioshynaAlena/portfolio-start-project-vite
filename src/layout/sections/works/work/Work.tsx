@@ -28,13 +28,13 @@ return (
             <WorkLinks>
                 <Link href={'#'}>
                  <Icon iconId={'chain'} width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
-                 <LinkDescription>Live Preview</LinkDescription>
                 </Link>
+                <LinkDescription><a href="">Live Preview</a></LinkDescription>
 
                 <Link href={'#'}>
                  <Icon iconId={'gh'} width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
-                 <LinkDescription>View Code</LinkDescription>
                 </Link>
+                <LinkDescription><a href="">View Code</a></LinkDescription>
                 
             </WorkLinks>
 </StyledWork>
@@ -97,11 +97,12 @@ column-gap: 10px;
 justify-content: center;
 padding-bottom: 20px;
 
-font-weight: 400;
+
+/* font-weight: 400;
 line-height: 26px;
 text-decoration: underline;
 text-decoration-style: solid;
-color: #000000;
+color: #000000; */
 `
 const WorkLinks = styled.div`
     display: flex;
@@ -112,6 +113,18 @@ const WorkLinks = styled.div`
 const LinkDescription = styled.div`
 ${font({ Fmax: 1, Fmin: 0.8})}
 line-height: 162.5%;
+margin-left: -40px;
+
+a {
+
+  font-weight: 400;
+line-height: 26px;
+text-decoration: underline;
+text-decoration-style: solid;
+color: #000000;  
+}
+
+
 `
 
 const ImageWrapper = styled.div`
