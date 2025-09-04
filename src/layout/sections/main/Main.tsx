@@ -5,6 +5,7 @@ import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
 import Typewriter from "typewriter-effect";
+import Tilt from "react-parallax-tilt";
 
 export const Main = () => {
   return (
@@ -16,12 +17,11 @@ export const Main = () => {
             <Name>
               I am <span>Alena Alioshyna</span>
             </Name>
-            {/* <MainTitle>A Frontend Developer.</MainTitle> */}
             <MainTitle>
               <p>A Frontend Developer.</p>
               <Typewriter
                 options={{
-                  strings: ["A Frontend Developer."],
+                  strings: ["Frontend Developer."],
                   autoStart: true,
                   loop: true,
                   delay: 50,
@@ -30,9 +30,19 @@ export const Main = () => {
             </MainTitle>
           </Preview>
 
-          <FotoWrapper>
-            <StyledPhoto src={photo} alt="" />
-          </FotoWrapper>
+          <Tilt
+            className="parallax-effect-img"
+            tiltMaxAngleX={40}
+            tiltMaxAngleY={40}
+            perspective={800}
+            transitionSpeed={1500}
+            scale={1.1}
+            gyroscope={true}
+          >
+            <FotoWrapper>
+              <StyledPhoto src={photo} alt="" />
+            </FotoWrapper>
+          </Tilt>
         </FlexWrapper>
       </Container>
     </StyledMain>
