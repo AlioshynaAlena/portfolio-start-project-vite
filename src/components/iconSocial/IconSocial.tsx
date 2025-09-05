@@ -7,8 +7,8 @@ export const IconSocial =() => {
     return (
  
         <IconWrapper>
-            <li><StyledIconSocial href=""><Icon iconId={'gitHubIcon'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/></StyledIconSocial></li>
-            <li><StyledIconSocial href=""><Icon iconId={'in'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/></StyledIconSocial></li>
+            <li><StyledIconSocial href="https://www.google.com/?hl=ru&zx=1757062032954&no_sw_cr=1"><Icon iconId={'gitHubIcon'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/></StyledIconSocial></li>
+            <li><StyledIconSocial href="https://www.google.com/?hl=ru&zx=1757062032954&no_sw_cr=1"><Icon iconId={'in'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/></StyledIconSocial></li>
         </IconWrapper>
 
                 
@@ -23,7 +23,6 @@ const IconWrapper = styled.ul`
     align-self: center;
 
 `
-
 
 const StyledIconSocial = styled.a`
 

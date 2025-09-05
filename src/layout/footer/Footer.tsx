@@ -29,8 +29,8 @@ export const Footer = () => {
                         </SocialIconLink> */}
 
                 <SocialIconLink>
-                <li><SocialLink href=""><Icon iconId={'gitHubIcon'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/></SocialLink></li>
-                <li><SocialLink href=""><Icon iconId={'in'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/></SocialLink></li>
+                <li><SocialLink href="https://www.google.com/?hl=ru&zx=1757062032954&no_sw_cr=1"><Icon iconId={'gitHubIcon'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/></SocialLink></li>
+                <li><SocialLink href="https://www.google.com/?hl=ru&zx=1757062032954&no_sw_cr=1"><Icon iconId={'in'} width={"30"} height={"30"} viewBox={"0 0 30 30"}/></SocialLink></li>
                 </SocialIconLink>
 
 

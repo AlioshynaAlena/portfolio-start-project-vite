@@ -26,19 +26,23 @@ return (
             <WorkDescription>{props.description}</WorkDescription>
             <WorkText>{props.text}</WorkText>
             <WorkLinks>
+                <WorkLinksWrapper>
+                    
                 <Link href={'#'}>
                  <Icon iconId={'chain'} width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
                 </Link>
-                <LinkDescription><a href="">Live Preview</a></LinkDescription>
+                <LinkDescription><a href={'#'}>Live Preview</a></LinkDescription>
+                </WorkLinksWrapper>
 
-                <Link href={'#'}>
+
+                <WorkLinksWrapper>
+                    <Link href={'https://www.google.com/?hl=ru&zx=1757062032954&no_sw_cr=1'}>
                  <Icon iconId={'gh'} width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
                 </Link>
-                <LinkDescription><a href="">View Code</a></LinkDescription>
-                
+                <LinkDescription><a href="https://www.google.com/?hl=ru&zx=1757062032954&no_sw_cr=1">View Code</a></LinkDescription>
+                </WorkLinksWrapper>
             </WorkLinks>
 </StyledWork>
-
 
 )
 }
@@ -70,8 +74,6 @@ ${font({ weight: 500, Fmax: 1.75, Fmin: 1.5  })}
 line-height: 26px;
 text-align: center;
 margin: 27px 30px 0;
-
-
 `
 
 const WorkDescription = styled.p`
@@ -79,8 +81,6 @@ ${font({ weight: 300, Fmax: 1.125, Fmin: 1  })}
 line-height: 26px;
 max-width: 314px;
 margin: 17px 30px 12px;
-
-
 `
 
 const WorkText = styled.p`
@@ -92,44 +92,31 @@ color: ${theme.colors.secondaryColorText};
 `
 
 const Link = styled.a`
-display: flex;
-column-gap: 10px;
-justify-content: center;
 padding-bottom: 20px;
-
-
-/* font-weight: 400;
-line-height: 26px;
-text-decoration: underline;
-text-decoration-style: solid;
-color: #000000; */
 `
+
 const WorkLinks = styled.div`
-    display: flex;
-    column-gap: 48px;
-    justify-content: center;
+display: flex;
+column-gap: 48px;
+justify-content: center;
 `
 
-const LinkDescription = styled.div`
+const LinkDescription = styled.p`
 ${font({ Fmax: 1, Fmin: 0.8})}
 line-height: 162.5%;
-margin-left: -40px;
 
 a {
 
-  font-weight: 400;
+font-weight: 400;
 line-height: 26px;
 text-decoration: underline;
 text-decoration-style: solid;
 color: #000000;  
 }
-
-
 `
 
 const ImageWrapper = styled.div`
     position: relative;
-
 
     &::before {
         content: '';
@@ -152,15 +139,9 @@ const ImageWrapper = styled.div`
 
         ${Button} {
             opacity: 1;
-             transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
     }
-
-
-
-
-
-
 
     ${Button} {
         opacity: 0;
@@ -175,8 +156,10 @@ const ImageWrapper = styled.div`
             height: 100%;
         }
     }
-
-    
-
 `
 
+
+const WorkLinksWrapper = styled.div`
+    display: flex;
+    gap: 5px;
+`
